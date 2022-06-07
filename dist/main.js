@@ -1,0 +1,15 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const employee_1 = require("./employee");
+const employee_manager_1 = require("./employee_manager");
+let employee1 = new employee_1.Employee("Van Thi Thanh", "Thuy", new Date("09-19-1996"), "HN", "Quan ly");
+let employee2 = new employee_1.Employee("Van Thi Thanh", "A", new Date("05-12-1995"), "HN", "Nhan vien");
+let employee3 = new employee_1.Employee("Nghiem Van", "Dong", new Date("08-08-1995"), "HN", "Bep Truong");
+let employee4 = new employee_1.Employee("Nghiem Van", "B", new Date("07-04-1999"), "HN", "Bep Pho");
+employee_manager_1.EmployeeManager.add(employee1, employee2, employee3, employee4);
+console.log(employee_manager_1.EmployeeManager.getListEmployee());
+employee_manager_1.EmployeeManager.updateEmployee("Ngo Thi", "A", new Date("05-12-2000"), "SG", "Vip");
+employee_manager_1.EmployeeManager.updateEmployee("Duy", "B", new Date("05-12-2001"), "TB", "Vip");
+console.log(employee_manager_1.EmployeeManager.getListEmployee());
+employee_manager_1.EmployeeManager.deleteEmployee("A");
+console.log(employee_manager_1.EmployeeManager.getListEmployee());
