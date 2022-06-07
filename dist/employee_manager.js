@@ -19,6 +19,13 @@ class EmployeeManager {
         });
         return i;
     }
+    static getEmployeeDetail(lastName) {
+        for (let i = 0; i < this.employees.length; i++) {
+            if (lastName == this.employees[i].lastName) {
+                console.log(this.employees[i]);
+            }
+        }
+    }
     static deleteEmployee(lastName) {
         let indexEmployeeDelete = this.findIndex(lastName);
         if (indexEmployeeDelete !== -1) {
